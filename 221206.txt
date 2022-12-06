@@ -1,0 +1,86 @@
+//console.log(545454545); // 콘솔에 전달 및 출력
+/* console.log("'lalalallala'");
+console.log(5 + 2);
+console.log(5 / 2);
+console.log(5 * 2); */
+
+//const a = 5;
+let a = 5; 
+//const b = 2;  // const b 는 절대 바꾸지 않는 고정값 
+//const myName ="ddung";
+let b = 2; 
+let myName ="ddung"; // << 여기서 const로 하면 에러뜰것임
+
+const veryLongVariableName = 0; //자바스크립트 스타일
+const very_long_var_name=0; //파이썬 스타일
+
+console.log(a + b);
+console.log(a / b);
+console.log(a * b);
+console.log("hello " + myName); // 콘솔에서 로깅한다는 뜻
+
+// 20221206
+// 변수 선언 방법 const랑 let 이라는 것이 있음 var 이라는 것도 있는데 얘는 업데이트 되어도 말해주지않음 
+// const = constant 상수 > 변할 수 없다는 것 , let은 변할 수 있음 
+
+myName = "cjlee"; // 업데이트 하고 싶을때 없데잍크 하는 것 
+
+console.log("your name is " + myName); //const가 기본이고 변수 업데이트 하고 싶으면 let을 씀 중요한 부분만 업데이트 할거임
+
+// 다른 데이터 타입 변수에 저장할 수 있는 것 boolean
+
+
+
+// 0 꺼져있음 false
+// 1 켜져있음 true
+// null 비어있음 
+// undefined 메모리에 공ㄱ나은 있지만 데이터는 없음 
+const amIFat = true;
+const amIThin = false; // false 는 꺼져있다는 뜻 
+const test = null; // null은 말 그대로 없다는 뜻 매우중요, 비어있어요 
+// let something;  = undefined, 메모리에 공간은 존재하지만 데이터는 없다는 뜻 
+let something ;
+
+console.log(something, test);
+console.log(test);
+console.log(amIFat);
+console.log(amIThin);
+
+
+// ---------------------------------------- Arrays ---------------------------------------------------
+/*const mon = "mon";
+const tue = "tue";
+const wed = "wed";
+const thu = "thu";
+const fri = "fri";
+const sat = "sat";
+const sund = "sund";  */
+
+const daysOfWeek = ["mon" , "tue" , "wed" , "thu" , "fri" , "sat" , "sund"];
+
+//const nonsense = [1, 2, "hello", false, true, null, undefined, "cjlee"]; // 이게 자바스크립트로 배열 선언하는 방법 , 대괄호 사용
+// Get Item from Array
+console.log(daysOfWeek);
+console.log("Friday is " + daysOfWeek[4]);
+
+// Add opne more day to the array
+daysOfWeek.push("test");
+console.log(daysOfWeek);
+
+//console.log(nonsense);
+//매우 꾸짐 
+// 데이터를 묶기위한 데이터타입이 필요함 > 다 스트링임
+
+const appel = "apple";
+const potato = "potato";
+
+const toBuy =["potato", "tomato", "pizza"];
+toBuy.push("kimbab");
+
+console.log(toBuy);
+
+
+// ---------------------------------------- Arrays END ---------------------------------------------------
+
+
+
