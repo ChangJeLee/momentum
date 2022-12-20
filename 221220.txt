@@ -1,0 +1,52 @@
+// ------------------------------------- function 20221220 ---------------------------------------
+console.log("Hello my name is CJLEE");
+console.log("Hello my name is DAL");
+console.log("Hello my name is gire");
+console.log("Hello my name is hyo");
+console.log("Hello my name is asdf");
+
+// 이건 매우 안좋음 
+// 생각해보면 코드에서 바뀌는 부분은 이름들임 , 나머지는 복사하고 있음 
+
+// function을 만들꺼임 >> 어떤 코드를 캡슐화 해서 실행을 여러번 할 수 있게 만들어줌 
+
+function sayHello(nameOfPerson, age)
+{
+    console.log("Hello my name is", nameOfPerson + " and I'm", age);
+}
+
+console.log("hello");
+sayHello("cjlee", 123);
+sayHello("asdf", 28);
+sayHello("hyo", 26);
+
+
+//argument는 function을 실행하는 동안 어떤 정보를 function에게 보낼 수 있는 방법임
+
+function plus(firNum, secNum)
+{
+    console.log(firNum + secNum);
+}
+
+
+function devide(a,b)
+{
+    console.log(a/b);
+}
+
+plus(8, 60);
+devide(4,2);
+
+const player =
+{
+    name: "cjlee",
+    sayHello: function(otherPersonName, age)
+    {
+        console.log("Hello my name is", otherPersonName + " and I'm", age + " nice to meet you");
+    }
+}
+
+player.sayHello("jklee",28);
+player.sayHello(player.name, 28)
+
+// ################################### function End ###############################################
