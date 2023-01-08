@@ -1,0 +1,54 @@
+// ----------------------------------------- Recap start ---------------------------------------------------
+const calculator =
+{
+    add: function(a, b)
+    {
+        return a + b;
+        //console.log(a+b);  >> plusResult 를 못쓰는 상황이 옴 >> 우린 콘솔에 띄우는게 아니라 화면에 띄워야할것임
+    },
+    minus: function(a, b)
+    {
+        return a - b;
+    },
+    poweroff: function(a, b)
+    {
+        return a ** b;
+    },
+    devide: function(a, b)
+    {
+        return a / b;
+    },
+};
+
+let plusResult = calculator.add(2, 3);
+console.log(plusResult);
+// ----------------------------------------- Recap end ---------------------------------------------------
+
+
+// --------------------------------- Conditionals start ----------------------------------------
+//const age = prompt("How old are you??"); //사용자에게서 메시지를 보여주고 값을 넣으라고 할 것임
+    // 이건 너무 오래된 것임 요즘에는 HTML CSS로 창 띄움 
+
+// console.log(typeof age); //타입을 변경하는 방법을 배울 것임
+
+//console.log(typeof "15", typeof parseInt("15"));
+//console.log(age, parseInt(age));
+
+const age = parseInt(prompt("How old are you?"));
+console.log(isNaN(age)); //isNaN return boolean함 
+
+if(isNaN(age) || age < 0) {
+    console.log("Please write a Number");
+} else if(age < 18) {
+    console.log("You are too young.");
+} else if(age >= 18 && age <= 50) {
+    console.log("You can drink.");
+} else if(age > 50 && age <= 80) {
+    console.log("You should exercise.");
+} else if (age == 100) {
+    console.log("wow you are wise.")
+} else if(age > 80) {
+    console.log("You can do whatever you want.");
+} 
+
+// --------------------------------- Conditionals end ------------------------------------------

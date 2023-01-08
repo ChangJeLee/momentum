@@ -50,3 +50,151 @@ player.sayHello("jklee",28);
 player.sayHello(player.name, 28)
 
 // ################################### function End ###############################################
+
+// #################################### recap start ###########################################
+
+const a = 5;
+// const isCjFat = false;
+let isCjFat = true; // let으로 선언하게되면 값 업데이트 가능 
+
+console.log(a);
+// isCjFat = true; >> false >> constant는 우리가 값을 업데이트 하지 못하게 함
+
+// null은 비어있다 라고 표현할 때 자주 쓰이게 될거임 
+let hello;
+let hello2 = "asd";
+
+console.log(hello); // 변수가 있지만 선언하지 않았다 
+console.log(hello2); // 변수가 있고 선언함
+
+const me = "sexy";
+const days = [1, 2, false, true, null, undefined, me];
+
+const toBuy = ["potato", "pizza", "tomato"];
+
+console.log(toBuy);
+toBuy[2] = "water";
+
+console.log(toBuy);
+toBuy.push("meat");
+console.log(toBuy);
+
+// # recap 2
+
+const playerOne =
+{
+    name:"cjlee",
+    age:98,
+};
+
+console.log(playerOne, console);
+playerOne.name = "changJe";
+console.log(playerOne);
+
+//before cjlee after change changJe
+
+playerOne.sexy = "soon";
+console.log(playerOne);
+
+
+function plus() 
+{
+    console.log(2 + 2);
+}
+
+plus();
+plus();
+plus();
+plus();
+plus();
+
+function goodCalc(a, b)
+{
+    console.log(a + b);
+}
+
+goodCalc(5, 10);
+goodCalc(5, 1.123123);
+goodCalc(5123, 1.123123);
+
+
+function minusFive(a)
+{
+    console.log(a - 5);
+}
+
+minusFive(10, 12, 13, 15 ,16, 3, 4);
+
+const calculator =
+{
+    add: function(a, b)
+    {
+        console.log(a + b);
+    },
+
+    minus: function(a, b)
+    {
+        console.log(a + b);
+    },
+
+    poweroff: function(a, b)
+    {
+        console.log(a + b);
+    },
+
+    devide: function(a, b)
+    {
+        console.log(a + b);
+    }
+}
+
+calculator.add(1, 1);
+
+// #################################### recap end ###########################################
+
+
+// ----------------------------------------- Return start ---------------------------------------------------
+const calculator =
+{
+    add: function(a, b)
+    {
+        return a + b;
+    },
+    minus: function(a, b)
+    {
+        return a - b;
+    },
+    poweroff: function(a, b)
+    {
+        return a ** b;
+    },
+    devide: function(a, b)
+    {
+        return a / b;
+    }
+}
+
+const plusResult = calculator.add(2, 3); // error
+const minusResult = calculator.minus(2, 3);
+const minusResult2 = calculator.minus(plusResult, 10);
+const powerResult = calculator.poweroff(2, 3);
+const devideResult = calculator.devide(powerResult, plusResult);
+
+
+console.log(plusResult);
+console.log(minusResult);
+console.log(minusResult2);
+console.log(powerResult);
+console.log(devideResult);
+
+const age = 96;
+function calculateKrAge(ageOfForeigner)
+{
+    return ageOfForeigner + 2; //함수에 console.log를 쓰는 일은 없을꺼임
+}
+
+const krAge = calculateKrAge(age);
+console.log(krAge);
+
+// ----------------------------------------- Return end ---------------------------------------------------
+
