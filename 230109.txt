@@ -1,0 +1,37 @@
+html_1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Momentum App</title>
+</head>
+<body>
+    <h1 class="hello!!!!" id="title">Grab me!</h1> 
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+app.js_1
+// 핵심인 object 를 볼 것임 
+const title = document.getElementById("title"); // 저 함수로 가져온것임 
+// document는 함수처럼 쓸 수있는것들이 많이 존재함
+
+title.innerText = "Got you!";
+console.dir(title);
+
+console.log(title.id);
+console.log(title.className);
+// 우린 document함수를 통해 object를 배운거임
+// 첫번째는, document에서 항목들을 가지고 오는 것이구
+// 두번째는, 이 document 항목들을 변경하는 거야 
+// javascript에서 HTML을 가져올 수 있는 다른 방법들을 배워 볼 것임 
+
+
+
+app.js:5 Uncaught TypeError: Cannot set properties of null (setting 'innerText')
+에러는 null의 innerText를 접근하려고 하는것때문임
+title은 null인데 우린 null의 innerText를 접근하려고 하는것
