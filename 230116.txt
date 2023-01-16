@@ -1,0 +1,141 @@
+// -------------------------------- CSS Start ----------------
+/*
+const h1 = document.querySelector(".hello:first-child h1");
+
+function handleTitleClick() {
+    const clickedClass = "clicked"; //이렇게 스트링을 변수에 저장하는건 아주 유용함 
+    if(h1.className === clickedClass) { // 여기서 clickedClas라고 오타치면 HTML에서 알려줌 에러로 
+        h1.className = "";
+    } else {
+        h1.className = clickedClass;
+    }
+}
+
+h1.addEventListener("click", handleTitleClick); */
+
+// ------------------- CSS -3 
+
+/*
+const h1 = document.querySelector(".hello:first-child h1");
+
+function handleTitleClick() {
+    const clickedClass = "clicked";  
+    if(h1.classList.contains(clickedClass)) {
+        h1.classList.remove(clickedClass);
+    } else {
+        h1.classList.add(clickedClass);
+    }
+}
+
+h1.addEventListener("click", handleTitleClick);
+
+
+className은 모든걸 교체해버린다. 이전의 class들은 상관하지 않고 말야.
+classList를 사용해야 해. class를 목록으로 작업할 수 있게끔 허용해.
+classList에는 멋진 function들이 있어.
+constains라는 function은 우리가 명시한 class가 HTML element의 class에 포함되어 있는지를 말해줘.
+remove라는 function은 명시한 class name을 제거하고
+add라는 function은 명시한 class name을 추가해.
+function handleTitleClick() {
+const clickedClass = "clicked";
+if(h1.classList.contains(clickedClass)) {
+h1.classList.remove(clickedClass);
+} else {
+h1.classList.add(clickedClass);
+}
+}
+더 좋은 function이 존재한다. toggle function은 class name이 존재하는지 확인한다.
+class name이 존재하면 toggle은 class name을 제거하고, class name이 존재하지 않으면 toggle은 class name을 추가한다.
+function handleTitleClick() {
+h1.classList.toggle("clicked");
+}
+한번만 적기 때문에 const도 필요 없다. toggle은 버튼같은거다. 켜고끄고.
+*/
+
+const h1 = document.querySelector(".hello:first-child h1");
+
+function handleTitleClick() {  
+    h1.classList.toggle("clicked"); //있다면 clicked 제거  없다면 clicked 추가 
+}
+
+h1.addEventListener("click", handleTitleClick);
+
+
+CSS START
+
+body {
+    background-color: beige;
+}
+
+h1 {
+    color: cornflowerblue;
+    transition:color .5s ease-in-out;
+}
+
+.clicked {
+    color: tomato;
+}
+
+.sexy-font {
+    
+}
+
+
+CSS END
+
+
+
+# ------------- INPUT VALUE start -----------
+
+
+
+//const loginForm = document.getElementById("#login-form");
+//const loginInput = loginForm.querySelector("input");
+//const loginButton = loginForm.querySelector("button");
+
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+function onLoginBtnClick() {
+///    console.dir(loginInput); 
+// 에서 얘 봄 value: ""
+    console.log("hello", loginInput.value);
+}
+
+loginButton.addEventListener("click", onLoginBtnClick);
+
+/* 
+모든 것은 HTML에서 시작되어야 함. HTML에서 작성하고 자바스크립트로 기능을 구현.
+먼저, HTML 코드 작성하기
+1. 사용자가 이름을 작성할 수 있도록 input 태그를 작성한다.
+
+안에 텍스트를 넣을 거니까, type="text"해주고, 안에 미리 작성할 말은 placeholder 안에 써주기
+2. 그리고 옆에 버튼을 만든다.
+Log In
+3. div태그로 위의 것들 묶어주고, id="login-form"을 해준다.
+왜 div태그로 묶는지 확실히는 모르겠지만, 내 생각에는 둘을 묶은 다음, 저 id를 통해서
+자바스크립트에서 내가 원하는 태그들을 쉽게 찾기 위해서 묶어주는 것 같음.
+
+input 안에 뭔가를 작성하고 로그인 버튼을 누르면 저장해야 되니까
+자바스크립트로 그 기능 구현하기
+
+그냥 html 태그를 가져올 수 없으니까 변수 안에 넣고 거기서 텍스트 받기
+
+1. const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+document 안에서 찾기. id="login-form"인 곳에서 input요소를 loginInput 안에 넣어주기
+
+2. 버튼을 클릭하면, 내가 작성한 값을 콘솔에 보여주는 기능
+
+loginButton.addEventListener("click, onLoginBtnClick);
+
+3. 함수 만들기
+function onLoginBtnClick(){
+console.log(loginInput.value);
+}
+
+input의 내용을 가져오려면 value라는 property를 찾아봐야 됨.*/
+
+
+# ------------- INPUT VALUE END  -----------

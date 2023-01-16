@@ -1,42 +1,25 @@
-const h1 = document.querySelector(".hello:first-child h1");
+//const loginForm = document.getElementById("#login-form");
+//const loginInput = loginForm.querySelector("input");
+//const loginButton = loginForm.querySelector("button");
 
-function handleTitleClick() {
-    h1.style.color = "blue";
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+/*function onLoginBtnClick() {
+    const username = loginInput.value;
+    if (username === ""){
+        alert("Please write your name");   
+    } else if(username.length > 15) { // <input required maxlength="15" 
+        alert("Your name is too long.")
+    }
 }
 
-function handleMouseEnter(){
-    h1.innerText = "Mouse is here!"
+loginButton.addEventListener("click", onLoginBtnClick);*/
+
+
+function onLoginBtnClick() {
+    const username = loginInput.value;
+    console.log(userName);
 }
 
-function handleMouseLeave(){
-    h1.innerText = "Mouse is gone!"
-}
-
-function handleWindowResize(){
-    document.body.style.backgroundColor = "tomato";
-}
-
-function handleWindowCopy(){
-    alert("copier!");
-}
-
-function handleWindowOffline(){
-    alert("SOS no WIFI!");
-}
-
-function handleWindowOnline(){
-    alert("ALL GOOOOD!");
-}
-
-h1.onclick = handleTitleClick;
-//title.addEventListener("click", handleTitleClick);
-h1.addEventListener("mouseenter",handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
-
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
-window.addEventListener("offline", handleWindowOffline);
-window.addEventListener("offline", handleWindowOnline);
-
-
-//https://developer.mozilla.org/ko/docs/Web/API
+loginButton.addEventListener("click", onLoginBtnClick);
