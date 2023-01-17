@@ -1,25 +1,20 @@
-//const loginForm = document.getElementById("#login-form");
-//const loginInput = loginForm.querySelector("input");
-//const loginButton = loginForm.querySelector("button");
+//사용자 이름을 입력받고 이후에는 다시 질의받지 않고 기억할꺼임
 
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
+const greeting = document.querySelector("#greeting");
 
-/*function onLoginBtnClick() {
+const link = document.querySelector("a");
+
+const HIDDEN_CLASSNAME = "hidden";
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME); 
     const username = loginInput.value;
-    if (username === ""){
-        alert("Please write your name");   
-    } else if(username.length > 15) { // <input required maxlength="15" 
-        alert("Your name is too long.")
-    }
+    localStorage.setItem("username", username);
+    greeting.innerText = `Hello ${username}`;  
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-loginButton.addEventListener("click", onLoginBtnClick);*/
-
-
-function onLoginBtnClick() {
-    const username = loginInput.value;
-    console.log(userName);
-}
-
-loginButton.addEventListener("click", onLoginBtnClick);
+loginForm.addEventListener("submit", onLoginSubmit);
