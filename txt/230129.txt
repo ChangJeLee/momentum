@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Momentum App</title>
+</head>
+<body>
+    <form class="hidden" id ="login-form" >
+     <input required maxlength="15" type="text" placeholder="What is your name?" />
+     <input type="submit" value="Log In" />
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+//사용자 이름을 입력받고 이후에는 다시 질의받지 않고 기억할꺼임
+// 이후 사용자 이름이 로컬 스토리지에 있으면 다시 로그인 form을 띄우면 안됨 
+
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const link = document.querySelector("a");
+
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME); 
+    const username = loginInput.value;    
+    localStorage.setItem(USERNAME_KEY, username);
+    paintGreegtings(username);
+}
+
+function paintGreegtings(username){
+    greeting.innerText = `Hello ${username}`;  
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+//console.log(savedUsername);
+
+if(savedUsername === null) {
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+    paintGreegtings(savedUsername);
+}
+
+
+======================================================================================
+html 변경이 있음 
+hidden 삭제 
+
+
+1. Math 객체 기능
+Math.random() 0부터 1사이 무작위의 값을 반환해줌
+Math.floor() 내림
+Math.ceil() 올림
+Math.round() 반올림
+
+2. JS에서 html 요소를 생성
+createElement(" ")
+예를 들어,
+document.createElement("img")일 경우 html 내에 img 태그를 생성
+
+appendChild()
+// 함수 안의 경로에 정의한 값을 가장 뒤에서 기입함
+prependChild()
+// 반대로 앞에서 기입
